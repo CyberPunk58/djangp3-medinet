@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def price_change(request):
+    return render(request, 'price_change/price_change.html')

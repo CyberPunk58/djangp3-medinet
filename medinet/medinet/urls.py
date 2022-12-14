@@ -18,10 +18,12 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from news import views
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name ='home')
+    path('', views.home, name ='home'),
+    path('price_change/', include('price_change.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
