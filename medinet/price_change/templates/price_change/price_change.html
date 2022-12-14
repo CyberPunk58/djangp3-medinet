@@ -1,1 +1,13 @@
 Здесь будут измнения в прайсе
+{% load static %}
+{% for price_change in price_change %}
+
+<h2>{{ price_change.title }}</h2>
+<h5>{{ price_change.date }}</h5>
+<h2>{{ price_change.decription }}</h2>
+{{ price_change.file}}
+{% if price_change.file %}
+<br><a href="{{ price_change.file.url}}">Link</a>
+{% endif %}
+
+{% endfor %}

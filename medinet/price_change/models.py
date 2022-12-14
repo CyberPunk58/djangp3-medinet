@@ -2,6 +2,6 @@ from django.db import models
 
 class Price_change(models.Model):
     title = models.CharField(max_length=200)  #Заголовок изменения
-    description = models.TextField #Описание изменения
+    description = models.TextField(default="default title") #Описание изменения
     date = models.DateField()
     file = models.FileField(upload_to='price_change/files/')
