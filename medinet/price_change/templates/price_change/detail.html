@@ -1,3 +1,6 @@
+{% extends 'news/base.html' %}
+{% block content %}
+
 <h1>{{ price_change.title }}</h1>
 
 --{{price_change.date}}--
@@ -7,3 +10,5 @@
 {% if price_change.file %}
 <br><a href="{{ price_change.file.url}}">PDF</a>
 {% endif %}
+
+{% endblock %}
