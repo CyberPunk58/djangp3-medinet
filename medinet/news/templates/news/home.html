@@ -1,5 +1,9 @@
 <h1>Новости клиники</h1>
 
+{% load static%}
+
+<a href="{% url 'price_change:price_change' %}">Прайс</a>
+
 
 {% for news in news %}
 

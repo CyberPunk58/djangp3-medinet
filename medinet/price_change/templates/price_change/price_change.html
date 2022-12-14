@@ -1,15 +1,15 @@
-Здесь будут измнения в прайсе
+
+
+
 {% load static %}
 <a href="{% static 'price_change/price.pdf' %}"> Прайс </a>
 
 {% for price_change in price_change %}
 
-<h2>{{ price_change.title }}</h2>
+<a href="{% url 'price_change:detail' price_change.id %}"><h2>{{ price_change.title }}</h2></a>
 <h5>{{ price_change.date }}</h5>
-<h2>{{ price_change.decription }}</h2>
+<h2>{{ price_change.description|truncatechars:100 }}</h2>
 
-{% if price_change.file %}
-<br><a href="{{ price_change.file.url}}">Link</a>
-{% endif %}
+
 
 {% endfor %}

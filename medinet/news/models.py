@@ -5,3 +5,7 @@ class News(models.Model): # Модель для новостей на сайте
     description = models.CharField(max_length=300) #Описание новости
     image = models.ImageField(upload_to='news/images/')
     url = models.URLField(blank=True) #Для ссылок Blank - открывает ссылкив новом окне
+
+
+    def __str__(self):
+        return self.title
