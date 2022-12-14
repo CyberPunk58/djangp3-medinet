@@ -1,0 +1,9 @@
+<h1>{{ price_change.title }}</h1>
+
+--{{price_change.date}}--
+
+<h2>{{price_change.description}}</h2>
+
+{% if price_change.file %}
+<br><a href="{{ price_change.file.url}}">PDF</a>
+{% endif %}
