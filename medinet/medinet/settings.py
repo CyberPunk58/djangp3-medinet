@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'news',
     'price_change',
     'blanks',
+    'contacts',
 ]
 
 MIDDLEWARE = [
