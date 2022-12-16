@@ -1,0 +1,18 @@
+{% extends 'news/base.html' %}
+{% block content %}
+{% load static%}
+
+{% for blank in blanks %}
+
+<a href="{{ blank.file.url }}"><h2>{{ blank.title }}</h2></a>
+<h5>{{ blank.date }}</h5>
+<h2>{{ blank.description }}</h2>
+
+
+_____
+
+
+
+{% endfor %}
+
+{% endblock %}
