@@ -1,8 +1,10 @@
+{% extends 'news/base.html' %}
+{% block content %}
 
-
-
+<!--
 {% load static %}
 <a href="{% static 'price_change/price.pdf' %}"> Прайс </a>
+-->
 
 {% for price_change in price_change %}
 
@@ -11,5 +13,10 @@
 <h2>{{ price_change.description|truncatechars:100 }}</h2>
 
 
+_____
+
+
 
 {% endfor %}
+
+{% endblock %}
