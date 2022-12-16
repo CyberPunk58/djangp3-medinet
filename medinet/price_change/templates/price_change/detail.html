@@ -5,7 +5,7 @@
 
 --{{price_change.date}}--
 
-<h2>{{price_change.description}}</h2>
+<h2>{{price_change.description|safe}}</h2>
 
 {% if price_change.file %}
 <br><a href="{{ price_change.file.url}}">PDF</a>

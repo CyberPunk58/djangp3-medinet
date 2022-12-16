@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'price_change',
     'blanks',
     'contacts',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

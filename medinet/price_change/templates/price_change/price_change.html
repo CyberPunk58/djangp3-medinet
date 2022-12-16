@@ -7,13 +7,12 @@
 -->
 
 {% for price_change in price_change %}
+<br>
+<a href="{% url 'price_change:detail' price_change.id %}"><h5>{{ price_change.title }}</h5></a>
+<h8>от {{ price_change.date }}</h8>
+<br>
 
-<a href="{% url 'price_change:detail' price_change.id %}"><h2>{{ price_change.title }}</h2></a>
-<h5>{{ price_change.date }}</h5>
-<h2>{{ price_change.description|truncatechars:100 }}</h2>
 
-
-_____
 
 
 

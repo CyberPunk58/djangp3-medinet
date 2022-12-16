@@ -8,7 +8,7 @@
 {% for news in news %}
 
 <h4> {{ news.title }} </h4>
-<p>{{ news.description }}</p>
+<p>{{ news.description|safe }}</p>
 <img src = '{{ news.image.url}}'>
 {% if news.url %}
 <br><a href="{{ news.url}}">Link</a>
