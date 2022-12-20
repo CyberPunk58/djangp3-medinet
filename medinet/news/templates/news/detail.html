@@ -1,0 +1,11 @@
+{% extends 'news/base.html' %}
+{% block content %}
+
+<h1>{{ news.title }}</h1>
+
+--{{news.date}}--
+
+<h2>{{news.description|safe}}</h2>
+
+
+{% endblock %}

@@ -5,16 +5,20 @@
 
 {% load static%}
 
+
+
 {% for news in news %}
-
-<h4> {{ news.title }} </h4>
-<p>{{ news.description|safe }}</p>
-<img src = '{{ news.image.url}}'>
-{% if news.url %}
-<br><a href="{{ news.url}}">Link</a>
-{% endif %}
-
-{% endfor%}
+<div class="d-flex position-relative">
+  <img src = '{{ news.image.url}}' width="200" height="200" class="flex-shrink-0 me-3" alt="...">
+  <div>
+    <h5 class="mt-0">{{ news.title }}</h5>
+    <p>{{news.description|safe|truncatechars:151}}"</p>
+    <br>
+    <a href="{% url 'news:detail' news.id %}" class="stretched-link">Подробнее</a>
+  </div>
+</div>
+<br>
+        {% endfor%}
 
 {%endblock%}
 

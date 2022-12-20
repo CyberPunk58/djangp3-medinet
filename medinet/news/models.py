@@ -7,6 +7,7 @@ class News(models.Model): # Модель для новостей на сайте
     description = RichTextField(blank=True, null=True)
     image = models.ImageField(upload_to='news/images/')
     url = models.URLField(blank=True) #Для ссылок Blank - открывает ссылкив новом окне
+    date = models.DateField(null=True)
 
 
     def __str__(self):
