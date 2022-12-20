@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% block content %}
+<div class="container">
 
 <h4><p class="text-center">{{ news.title }}</p></h4>
 
@@ -7,5 +8,5 @@
 <img src="{{ news.image.url}}" width="200" height="200" class="rounded mx-auto d-block" alt="...">
 <p class="lh-sm">{{news.description|safe}}</p>
 
-
+</div>
 {% endblock %}

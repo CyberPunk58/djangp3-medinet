@@ -1,6 +1,7 @@
 {% extends 'news/base.html' %}
 {% block content %}
 
+<div class="container">
 
 <h4><p class="text-center">{{ price_change.title }}</p></h4>
 
@@ -8,8 +9,10 @@
 <!--<img src="{{ news.image.url}}" width="200" height="200" class="rounded mx-auto d-block" alt="...">-->
 <p class="lh-sm">{{price_change.description|safe}}</p>
 
+<!--
 {% if price_change.file %}
 <br><a href="{{ price_change.file.url}} target="_blank"">PDF</a>
 {% endif %}
-
+-->
+</div>
 {% endblock %}
