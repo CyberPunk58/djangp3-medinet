@@ -1,11 +1,11 @@
 {% extends 'news/base.html' %}
 {% block content %}
 
-<h1>{{ news.title }}</h1>
+<h4><p class="text-center">{{ news.title }}</p></h4>
 
---{{news.date}}--
-
-<h2>{{news.description|safe}}</h2>
+<h6 class="text-center text-muted mb-5">--{{news.date}}--</h6>
+<img src="{{ news.image.url}}" width="200" height="200" class="rounded mx-auto d-block" alt="...">
+<p class="lh-sm">{{news.description|safe}}</p>
 
 
 {% endblock %}
