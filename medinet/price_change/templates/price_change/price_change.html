@@ -2,14 +2,17 @@
 {% block content %}
 
 {% for price_change in price_change %}
-<br>
-<a href="{% url 'price_change:detail' price_change.id %}"><h5>{{ price_change.title }}</h5></a>
-<h8>от {{ price_change.date }}</h8>
-<br>
 
 
 
-
+<div class="card">
+  <h5 class="card-header">От {{ price_change.date }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ price_change.title }}</h5>
+    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+    <a href="{% url 'price_change:detail' price_change.id %}" class="btn btn-primary">Посмотреть</a>
+  </div>
+</div>
 
 {% endfor %}
 
