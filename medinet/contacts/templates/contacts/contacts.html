@@ -1,16 +1,18 @@
 {% extends 'news/base.html' %}
 {% block content %}
+<table class="table table-striped">
 
     <div class="features_contacts">
        <h1>Список телефонов</h1>
-       <table width="100%">
+       <table class="table table-striped" width="100%">
             <tr><th width="200">Контакт</th><th width="200">ФИО</th><th width="200">Внутренний номер</th><th width="200">Городской номер</th></tr> <!--ряд с ячейками заголовков-->
        </table>
             {% for el in contacts %}
-                <table width="100%">
+                <table class="table table-striped" width="100%">
                     <tr bgcolor="d9d9d9"><td width="200">{{el.job_title}}</td><td width="200">{{el.full_name}}</td><td width="200">{{el.ext_number}}</td><td width="200">{{el.phone_number}}</td></tr> <!--ряд с ячейками тела таблицы-->
                 </table>
              {% endfor %}
    </div>
+    </table>
 {% endblock %}
 
